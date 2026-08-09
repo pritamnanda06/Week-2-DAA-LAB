@@ -23,4 +23,18 @@ The final worst-case running time of the modified merge sort is $O(n \log n)$.
 
 This is for Q3(a)
 
-The final worst-case running time is $T(k, n) = O(n k^2)$.
+Suppose we are given $k$ sorted arrays, each containing $n$ elements.
+
+* **Step 1:** Merge the first array (size $n$) with the second array (size $n$). This takes $O(n + n) = O(2n)$ time, producing a combined sorted array of size $2n$.
+* **Step 2:** Merge the accumulated array (size $2n$) with the third array (size $n$). This takes $O(2n + n) = O(3n)$ time, producing a combined sorted array of size $3n$.
+* **Step $i$:** In general, merging the accumulated array of size $(i-1)n$ with the $i$-th array of size $n$ takes $O(i \cdot n)$ time.
+* **Final Step ($k$-th array):** Merging the accumulated array of size $(k-1)n$ with the final $k$-th array takes $O(k \cdot n)$ time.
+
+To find the total worst-case running time, we sum the costs of all $k-1$ merge operations:
+$$T(k, n) = \sum_{i=2}^{k} O(i \cdot n) = O\left(n \sum_{i=2}^{k} i\right)$$
+
+Using the arithmetic series sum formula $\sum_{i=1}^{k} i = \frac{k(k+1)}{2}$, the sum evaluates to:
+$$\sum_{i=2}^{k} i = \frac{k(k+1)}{2} - 1 = O(k^2)$$
+
+Substituting this back gives the total worst-case running time:
+$$T(k, n) = O(n k^2)$$

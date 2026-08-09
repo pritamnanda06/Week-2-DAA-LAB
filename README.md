@@ -36,7 +36,7 @@ Compare f(n) with n^{\log_b a}: Since f(n) = O(n), it perfectly matches O(n^{\lo
 
 This falls directly under Case 2 of the Master Theorem.Therefore, the worst-case running time is:
 
-                              T(n) = O(n^{\log_3 3} \log n) = O(n \log_3 n)
+                              T(n) = O(n^{log_3 3}log n) = O(nlog_3 n)
 
 Because logarithmic bases are constant factors of one another (i.e., \log_3 n = \frac{\log_2 n}{\log_2 3}), we drop the base in asymptotic notation. 
 

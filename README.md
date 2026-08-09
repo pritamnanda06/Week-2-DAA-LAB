@@ -17,3 +17,10 @@ This is for Q1
 This is for Q2
 
 The final worst-case running time of the modified merge sort is O(nlog n).
+
+
+
+
+This is for Q3(a)
+
+The final worst-case running time is T(k, n) = O(n k^2)

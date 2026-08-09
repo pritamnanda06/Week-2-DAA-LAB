@@ -35,9 +35,7 @@ Therefore, the worst-case running time is:
 $$T(n) = O(n^{\log_3 3} \log n) = O(n \log_3 n)$$
 
 Because logarithmic bases are constant factors of one another (i.e., $\log_3 n = \frac{\log_2 n}{\log_2 3}$), we drop the base in asymptotic notation. The final worst-case running time of the modified merge sort is $O(n \log n)$.
-
-
-
+_______________________________________________________________________________________________________________________________________________________________________________________
 
 This is for Q3(a)
 
@@ -56,9 +54,7 @@ $$\sum_{i=2}^{k} i = \frac{k(k+1)}{2} - 1 = O(k^2)$$
 
 Substituting this back gives the total worst-case running time:
 $$T(k, n) = O(n k^2)$$
-
-
-
+_______________________________________________________________________________________________________________________________________________________________________________________
 
 This is for Q3(b)
 

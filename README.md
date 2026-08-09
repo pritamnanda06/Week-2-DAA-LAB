@@ -38,4 +38,4 @@ This falls directly under Case 2 of the Master Theorem.Therefore, the worst-case
 
 Because logarithmic bases are constant factors of one another (i.e., \log_3 n = \frac{\log_2 n}{\log_2 3}), we drop the base in asymptotic notation. 
 
-The final worst-case running time of the modified merge sort is O(n \log n).
+The final worst-case running time of the modified merge sort is O(nlog n).

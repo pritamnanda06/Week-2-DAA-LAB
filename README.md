@@ -16,7 +16,7 @@ This is for Q1
 
 This is for Q2
 
-The final worst-case running time of the modified merge sort is O(nlog n).
+The final worst-case running time of the modified merge sort is $O(n \log n)$.
 
 
 

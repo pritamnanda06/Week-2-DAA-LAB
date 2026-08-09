@@ -59,3 +59,21 @@ $$\sum_{i=2}^{k} i = \frac{k(k+1)}{2} - 1 = O(k^2)$$
 
 Substituting this back gives the total worst-case running time:
 $$T(k, n) = O(n k^2)$$
+
+
+
+
+This is for Q3(b)
+
+Suppose we are given $k$ sorted arrays, each containing $n$ elements, making a total of $kn$ elements.
+
+* **Round 1:** The algorithm pairs up the $k$ arrays into $\frac{k}{2}$ pairs. Each pair merges two arrays of size $n$ into a single sorted array of size $2n$. Cost per merge = $O(2n)$. Number of operations in Round 1 = $\frac{k}{2} \times O(2n) = O(kn)$ total work.
+* **Round 2:** We now have $\frac{k}{2}$ arrays, each of size $2n$. They are paired up into $\frac{k}{4}$ pairs, merging into arrays of size $4n$. Number of operations in Round 2 = $\frac{k}{4} \times O(4n) = O(kn)$ total work.
+* **Round $j$:** In general, at round $j$, there are $\frac{k}{2^j}$ arrays of size $2^{j-1}n$. The work done in this round is $\frac{k}{2^j} \times O(2^{j-1}n) = O(kn)$.
+
+Since the number of arrays halves at each round, the process continues for a total of $\log_2 k$ rounds.
+
+To find the total running time, we multiply the number of rounds by the work done per round:
+$$T(k, n) = (\text{Number of rounds}) \times (\text{Work per round}) = \log_2 k \times O(kn)$$
+
+Therefore, the running time of Method 2 as a function of $n$ and $k$ is $O(nk \log k)$.

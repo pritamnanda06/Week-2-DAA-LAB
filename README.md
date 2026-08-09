@@ -11,6 +11,9 @@ This is for Q1
 | **Doubly Sorted** | `O(n)` | `O(n)` | `O(1)` | `O(1)` | `O(1)` | `O(1)` | `O(1)` |
 
 
+
+
+
 This is for Q2
 
 The worst-case running time is: $$T(n) = O(n^{\log_3 3} \log n) = O(n \log_3 n)$$
